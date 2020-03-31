@@ -97,6 +97,21 @@ app.put("/blogs/:id",function(req,res){
    
 });
 
+//deplete route
+app.delete("/blogs/:id",function(req,res){
+    //destroy then redirect
+    Blog.findByIdAndRemove(req.params.id,function(err){
+        if(err)
+        {
+            res.redirect("/blogs/");
+        }
+        else
+        {
+            res.redirect("/blogs/");
+        }
+    });
+})
+
 
 app.listen(3000,function(){
     console.log("server is running");

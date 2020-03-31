@@ -4,3 +4,7 @@ i.icon{
 .container.main{
     margin-top:5em;
 }
+
+#del{
+    display: inline;
+}
